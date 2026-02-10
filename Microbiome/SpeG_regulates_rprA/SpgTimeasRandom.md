@@ -1,3 +1,5 @@
+<span style="color: red;">This page is automatically generated with RMarkdown and the source file can be found [here](https://github.com/rlimeira/Portfolio/tree/main/Microbiome/SpeG_regulates_rprA).</span>
+
 Analysis performed for:
 
 The spermidine acetyltransferase SpeG regulates transcription of the small RNA RprA
@@ -6,9 +8,9 @@ Linda I. Hu, Ekaterina V. Filippova, Joseph Dang, Sergii Pshenychnyi, Ji
 
 bioRxiv 462937; doi: <https://doi.org/10.1101/462937>
 
-# Methods Exerpt From Paper
+# Methods Excerpt From Paper
 
-To determine whether experimental results were statistically significant, a linear regression was performed, comparing all experimental groups with their respective vector controls. All of the regressions used were set up as follows: the calculated rprApromoter activity was the response variable, the overexpressed plasmids or mutant were the explanatory variable, and time was a random effect. OD was not included as an effect on activity as it is already used in the calculation of activity. Time as a random effect was chosen based on the question asked: Accounting for the effects of time on activity does the experimental group in question signifi- cantly affect overall rprApromoter activity? The significance threshold was set at 0.05. The open source program R (version 3.3.2) and packages “lmerTest”, “ggplot2”, and “moments” were used to visualize and analyze the data (76,77,78,79).
+“To determine whether experimental results were statistically significant, a linear regression was performed, comparing all experimental groups with their respective vector controls. All of the regressions used were set up as follows: the calculated rprApromoter activity was the response variable, the overexpressed plasmids or mutant were the explanatory variable, and time was a random effect. OD was not included as an effect on activity as it is already used in the calculation of activity. Time as a random effect was chosen based on the question asked: Accounting for the effects of time on activity does the experimental group in question signifi- cantly affect overall rprApromoter activity? The significance threshold was set at 0.05. The open source program R (version 3.3.2) and packages “lmerTest”, “ggplot2”, and “moments” were used to visualize and analyze the data (76,77,78,79).”
 
 **Activity = 1 Miller Unit = 1000 x (Abs420 - (1.75 x Abs550)) / (T x V x Abs600) We are then able to disregard OD**
 
@@ -330,7 +332,7 @@ kurtosis(spgdata1B$Activity)
 
 ![](SpgTimeasRandom_files/figure-commonmark/1Bmixed.lmer-1.png)<!-- -->![](SpgTimeasRandom_files/figure-commonmark/1Bmixed.lmer-2.png)<!-- -->
 
-# Conclusion Exerpts From Paper
+# Conclusion Excerpts From Paper
 
 When SpeG was overexpressed from a plasmid in the reference strain, PrprA activity was reduced compared to the vector control during late exponential growth and during the transition into early stationary phase (OD \>1.0, Fig 1A, linear regression analysis t = -2.553, p = 0.01472). When speGwas deleted, PrprAactivity increased in the isogenic speG mutant compared to its wild-type parent (Fig 1B, linear regression analysis t = 7.750, p = 8.65E-12). Based on these results, we conclude that SpeG inhibits transcription from PrprA.
 
