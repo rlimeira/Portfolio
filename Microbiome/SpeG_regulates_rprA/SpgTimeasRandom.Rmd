@@ -61,7 +61,7 @@ library(moments)
 
 ### Taking a look at the data
 
-```{r, 3Agraph, echo=FALSE, fig.width=4, fig.height=2}
+```{r, 3Agraph, echo=FALSE, fig.retina=TRUE}
 head(spgdata3A, n=10L)
 tail(spgdata3A, n=10L)
 ggplot(spgdata3A, aes(x = OD, y = Activity, colour = Cell_Type)) +
@@ -82,13 +82,13 @@ ggplot(spgdata3A, aes(x = Time, y = OD, colour = Cell_Type)) +
 
 ### Checking data "Activity" for normality
 
-```{r 3Anormality, echo=TRUE, fig.width=4, fig.height=4}
+```{r 3Anormality, echo=TRUE, fig.retina=TRUE}
 hist(spgdata3A$Activity)
 skewness(spgdata3A$Activity)
 kurtosis(spgdata3A$Activity)
 ```
 
-```{r 3Abasic_LM, include=FALSE, echo=FALSE, message=FALSE, warning=FALSE, fig.width=4, fig.height=4}
+```{r 3Abasic_LM, include=FALSE, echo=FALSE, message=FALSE, warning=FALSE, fig.retina=TRUE}
 ###Let's look at the data with a basic lm.
 #Setting Orthogonal Contrast
 #ExpvsCtrl<-c(1,1,-2)# Comparing both experimental contrasts with wild type
@@ -114,7 +114,7 @@ plot(basic.lm, which = 2)
 
 ### Accounting for time as a random effect
 
-```{r 3Amixed.lmer, echo=FALSE, fig.width=4, fig.height=4}
+```{r 3Amixed.lmer, echo=FALSE, fig.retina=TRUE}
 mixed.lmer<-lmer(Activity ~ Cell_Type + (1|Time), data=spgdata3A)
 summary(mixed.lmer)
 plot(mixed.lmer)
@@ -126,7 +126,7 @@ qqline(resid(mixed.lmer))
 
 ### Take a look at the data
 
-```{r, 3Bgraph, echo=FALSE, fig.width=4, fig.height=2}
+```{r, 3Bgraph, echo=FALSE, fig.retina=TRUE}
 head(spgdata3B, n=10L)
 tail(spgdata3B, n=10L)
 ggplot(spgdata3B, aes(x = OD, y = Activity, colour = Cell_Type)) +
@@ -147,13 +147,13 @@ ggplot(spgdata3B, aes(x = Time, y = OD, colour = Cell_Type)) +
 
 ### Checking data "Activity" for normality
 
-```{r 3Bnormality, echo=TRUE, fig.width=4, fig.height=4}
+```{r 3Bnormality, echo=TRUE, fig.retina=TRUE}
 hist(spgdata3B$Activity)
 skewness(spgdata3B$Activity)
 kurtosis(spgdata3B$Activity)
 ```
 
-```{r 3Bbasic_LM, include=FALSE, echo=FALSE, message=FALSE, warning=FALSE, fig.width=4, fig.height=4}
+```{r 3Bbasic_LM, include=FALSE, echo=FALSE, message=FALSE, warning=FALSE, fig.retina=TRUE}
 ###Let's look at the data with a basic lm.
 #Setting Orthogonal Contrast
 #ExpvsCtrl<-c(1,1,-2)# Comparing both experimental contrasts with wild type
@@ -179,7 +179,7 @@ plot(basic.lm, which = 2)
 
 ### Accounting for time as a random effect
 
-```{r 3Bmixed.lmer, echo=FALSE, fig.width=4, fig.height=4}
+```{r 3Bmixed.lmer, echo=FALSE, fig.retina=TRUE}
 mixed.lmer<-lmer(Activity ~ Cell_Type + (1|Time), data=spgdata3B)
 summary(mixed.lmer)
 plot(mixed.lmer)
@@ -191,7 +191,7 @@ qqline(resid(mixed.lmer))
 
 ### Take a look at the data
 
-```{r, 1Agraph, echo=FALSE, fig.width=4, fig.height=2}
+```{r, 1Agraph, echo=FALSE, fig.retina=TRUE}
 head(spgdata1A, n=10L)
 tail(spgdata1A, n=10L)
 ggplot(spgdata1A, aes(x = OD, y = Activity, colour = Cell_Type)) +
@@ -212,13 +212,13 @@ ggplot(spgdata1A, aes(x = Time, y = OD, colour = Cell_Type)) +
 
 ### Checking data "Activity" for normality
 
-```{r 1Anormality, echo=TRUE, fig.width=4, fig.height=4}
+```{r 1Anormality, echo=TRUE, fig.retina=TRUE}
 hist(spgdata1A$Activity)
 skewness(spgdata1A$Activity)
 kurtosis(spgdata1A$Activity)
 ```
 
-```{r 1Abasic_LM, include=FALSE, echo=FALSE, message=FALSE, warning=FALSE, fig.width=4, fig.height=4}
+```{r 1Abasic_LM, include=FALSE, echo=FALSE, message=FALSE, warning=FALSE, fig.retina=TRUE}
 ###Let's look at the data with a basic lm.
 
 PspeGPlasmidvsCtrl<-c(1, 0)# Comparing pspeG plasmid with control
@@ -238,7 +238,7 @@ plot(basic.lm, which = 2)
 
 ### Accounting for time as a random effect
 
-```{r 1Amixed.lmer, echo=FALSE, fig.width=4, fig.height=4}
+```{r 1Amixed.lmer, echo=FALSE, fig.retina=TRUE}
 mixed.lmer<-lmer(Activity ~ Cell_Type + (1|Time), data=spgdata1A)
 summary(mixed.lmer)
 plot(mixed.lmer)
@@ -271,13 +271,13 @@ ggplot(spgdata1B, aes(x = Time, y = OD, colour = Cell_Type)) +
 
 ### Checking data "Activity" for normality
 
-```{r 1Bnormality, echo=TRUE, fig.width=4, fig.height=4}
+```{r 1Bnormality, echo=TRUE, fig.retina=TRUE}
 hist(spgdata1B$Activity)
 skewness(spgdata1B$Activity)
 kurtosis(spgdata1B$Activity)
 ```
 
-```{r 1Bbasic_LM, include=FALSE, echo=FALSE, message=FALSE, warning=FALSE, fig.width=4, fig.height=4}
+```{r 1Bbasic_LM, include=FALSE, echo=FALSE, message=FALSE, warning=FALSE, fig.retina=TRUE}
 #Let's look at the data with a basic lm.
 
 PspeGvsCtrl<-c(1, 0)# Comparing pspeG plasmid with control
@@ -297,7 +297,7 @@ plot(basic.lm, which = 2)
 
 ### Accounting for time as a random effect
 
-```{r 1Bmixed.lmer, echo=FALSE, fig.width=4, fig.height=4}
+```{r 1Bmixed.lmer, echo=FALSE, fig.retina=TRUE}
 mixed.lmer<-lmer(Activity ~ Cell_Type + (1|Time), data=spgdata1B)
 summary(mixed.lmer)
 plot(mixed.lmer)
