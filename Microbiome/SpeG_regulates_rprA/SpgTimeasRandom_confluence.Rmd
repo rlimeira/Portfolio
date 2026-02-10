@@ -1,7 +1,20 @@
-
 ---
-title: "Linear Regression Analysis for The spermidine acetyltransferase SpeG regulates transcription of the small RNA rprA"
-output: html_document
+title: "`r params$study_name`"
+author: "Robert Limeira"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+params:
+  study_name: Linear Regression Analysis for The spermidine acetyltransferase SpeG regulates transcription of the small RNA rprA
+output: 
+  conflr::confluence_document:
+    parent_id: "393218"
+    space_key: "~7120204d1e65b567a34862bddeb1134d81acf6"
+    type: "page"
+    toc: TRUE
+    toc_depth: 2
+    code_folding: "none"
+    update: TRUE
+    use_original_size: TRUE
+    interactive: FALSE
 ---
 
 [This page is automatically generated with RMarkdown and the source file can be found [here](https://github.com/rlimeira/Portfolio/tree/main/Microbiome/SpeG_regulates_rprA).]{style="color: red;"}

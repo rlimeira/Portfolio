@@ -74,7 +74,8 @@ kurtosis(spgdata3A$Activity)
 
 ### Accounting for time as a random effect
 
-    #> Linear mixed model fit by REML. t-tests use Satterthwaite's method ['lmerModLmerTest']
+    #> Linear mixed model fit by REML. t-tests use Satterthwaite's method [
+    #> lmerModLmerTest]
     #> Formula: Activity ~ Cell_Type + (1 | Time)
     #>    Data: spgdata3A
     #> 
@@ -151,7 +152,8 @@ kurtosis(spgdata3B$Activity)
 
 ### Accounting for time as a random effect
 
-    #> Linear mixed model fit by REML. t-tests use Satterthwaite's method ['lmerModLmerTest']
+    #> Linear mixed model fit by REML. t-tests use Satterthwaite's method [
+    #> lmerModLmerTest]
     #> Formula: Activity ~ Cell_Type + (1 | Time)
     #>    Data: spgdata3B
     #> 
@@ -228,7 +230,8 @@ kurtosis(spgdata1A$Activity)
 
 ### Accounting for time as a random effect
 
-    #> Linear mixed model fit by REML. t-tests use Satterthwaite's method ['lmerModLmerTest']
+    #> Linear mixed model fit by REML. t-tests use Satterthwaite's method [
+    #> lmerModLmerTest]
     #> Formula: Activity ~ Cell_Type + (1 | Time)
     #>    Data: spgdata1A
     #> 
@@ -303,7 +306,8 @@ kurtosis(spgdata1B$Activity)
 
 ### Accounting for time as a random effect
 
-    #> Linear mixed model fit by REML. t-tests use Satterthwaite's method ['lmerModLmerTest']
+    #> Linear mixed model fit by REML. t-tests use Satterthwaite's method [
+    #> lmerModLmerTest]
     #> Formula: Activity ~ Cell_Type + (1 | Time)
     #>    Data: spgdata1B
     #> 
