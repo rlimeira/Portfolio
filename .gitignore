@@ -1,4 +1,7 @@
 
+#This file
+*.gitignore
+
 # Datasets 
 *data
 
