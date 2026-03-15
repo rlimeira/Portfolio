@@ -1,4 +1,47 @@
-.Rproj.user
-.Rhistory
-.RData
-.Ruserdata
+
+# Datasets 
+*data
+
+# History files
+*.Rhistory
+
+# Session Data files
+*.RData
+
+#Output files from R CMD build
+*.tar.gz
+*.tsv.gz
+
+#RStudioFiles
+*.Rproj.user
+*.Rhistory
+*.RData
+*.Ruserdata
+*.Rproj
+
+# Knitr and R markdown default cache directories
+*_cache
+*cache
+
+# Temporary files created by R markdown
+*.utf8.md
+*.knir.md
+
+# Output files from R CMD check
+*.Rcheck
+
+# Large Images
+*.HEIC
+
+# macOS files
+*.DS_Store
+
+# Markdown files
+*.md
+*.md_results_url
+*_files
+*figure-commonmark
+*.tex
+*.log
+
+

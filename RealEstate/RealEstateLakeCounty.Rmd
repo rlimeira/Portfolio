@@ -1,43 +1,32 @@
 
 ---
-title: Linear Regression Analysis for The spermidine acetyltransferase SpeG regulates
-  transcription of the small RNA rprA
+title: TBD
 output:
-  pdf_document: default
-  html_document: default
+  pdf_document:
+    latex_engine: xelatex
+    keep_tex: true
+geometry: margin=1in
 ---
+  
 
-[This page is automatically generated with RMarkdown and the source file can be found [here](https://github.com/rlimeira/Portfolio/tree/main/Microbiome/SpeG_regulates_rprA).]{style="color: red;"}
+[This page is automatically generated with RMarkdown and the source file can be found [here](https://github.com/rlimeira/Portfolio/tree/main/RealEstate).]{style="color: red;"}
 
-Analysis performed for:
+# Methods
 
-The spermidine acetyltransferase SpeG regulates transcription of the small RNA RprA
-
-Linda I. Hu, Ekaterina V. Filippova, Joseph Dang, Sergii Pshenychnyi, Jiapeng Ruan, OlgaKiryukhina, Wayne F. Anderson, Misty L. Kuhn, Alan J. Wolfe
-
-bioRxiv 462937; doi: <https://doi.org/10.1101/462937>
-
-# Methods Excerpt From Paper
-
-"To determine whether experimental results were statistically significant, a linear regression was performed, comparing all experimental groups with their respective vector controls. All of the regressions used were set up as follows: the calculated rprApromoter activity was the response variable, the overexpressed plasmids or mutant were the explanatory variable, and time was a random effect. OD was not included as an effect on activity as it is already used in the calculation of activity. Time as a random effect was chosen based on the question asked: Accounting for the effects of time on activity does the experimental group in question signifi- cantly affect overall rprApromoter activity? The significance threshold was set at 0.05. The open source program R (version 3.3.2) and packages “lmerTest”, “ggplot2”, and “moments” were used to visualize and analyze the data (76,77,78,79)."
-
-**Activity = 1 Miller Unit = 1000 x (Abs420 - (1.75 x Abs550)) / (T x V x Abs600) We are then able to disregard OD**
-
-Hypothesis: Treatment groups (plasmids or mutant) have an effect on rprA Promoter activity compared to their respected vector controls.
-
-Note: Although we check for normality of the data during analysis in order to determine the correct test to use for the question asked for the final test selected normal data is not necessary.
+Data was downloaded from Lake County Chief County Assessment Office Data Extract: https://www.lakecountyil.gov/3942/Data-Extract?utm_source=chatgpt.com 
 
 # Analysis Details
 
 ```{r setup, include=FALSE, warning=FALSE}
 
+
 rm(list=ls(all=TRUE))
-knitr::opts_chunk$set(echo = TRUE, root.dir = 'Z:/Users/rlimeira/Documents/Work/Loyola/R_Scrap/SPG_Project')
+knitr::opts_chunk$set(echo = TRUE, root.dir = '/Users/rlimeira/Documents/Work/GitHub/Portfolio/RealEstate')
 options(scipen=999)
-spgdata3A<-read.csv("spgdata3A.csv")
-spgdata3B<-read.csv("spgdata3B.csv")
-spgdata1A<-read.csv("spgdata1A.csv")
-spgdata1B<-read.csv("spgdata1B.csv")
+
+library(readxl)
+df <-read_excel("./data/LAKE_COUNTY_6.xlsx")
+
 
 ```
 
